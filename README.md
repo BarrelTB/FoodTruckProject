@@ -28,7 +28,7 @@ This program is a homework assignment for week 3 of the Skill Distillery coding 
 ### Step 5:
   Choosing option 1: Listing All the Food Trucks and Their Information.
 
-    ![Img name](<https://github.com/BarrelTB/FoodTruckProject/issues/5#issue-527578230>)
+    ![Img name](https://github.com/BarrelTB/FoodTruckProject/issues/5#issue-527578230)
 
 ### Step 6:
   Choosing option 2: Finding the Average Rating of All the Food Trucks
