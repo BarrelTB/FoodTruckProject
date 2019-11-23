@@ -28,7 +28,7 @@ This program is a homework assignment for week 3 of the Skill Distillery coding 
 ### Step 5:
   Choosing option 1: Listing All the Food Trucks and Their Information:
 
-    <img width="339" alt="Screen Shot 2019-11-23 at 9 32 00 AM" src="https://user-images.githubusercontent.com/56698364/69482078-1bde4200-0dd4-11ea-8b10-f196bc10dcfe.png">
+    <img width="271" alt="Screen Shot 2019-11-23 at 9 48 47 AM" src="https://user-images.githubusercontent.com/56698364/69482299-75e00700-0dd6-11ea-862e-149f75d423e0.png">
 
 ### Step 6:
   Choosing option 2: Finding the Average Rating of All the Food Trucks
