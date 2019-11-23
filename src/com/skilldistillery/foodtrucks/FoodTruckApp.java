@@ -18,31 +18,30 @@ public class FoodTruckApp {
 
 	public void run(FoodTruck[] trucks) {
 
-
-			for (int truck = 0; truck < trucks.length; truck++) {
-				System.out.println("Please enter the name of a food truck: ");
-				System.out.println("Or to quit where you're at and view the trucks type Quit:");
-				System.out.println();
-				String name = kb.nextLine();
-				if (name.equals("Quit") || name.equals("quit")) {
-					displayFoodTruckOptions(trucks);
-					break;
-				}
-				System.out.println();
-				System.out.println("Please enter the food type of the food truck: ");
-				System.out.println();
-				String type = kb.nextLine();
-				System.out.println();
-				System.out.println("Please enter the rating of the food truck: ");
-				System.out.println();
-				int rating = kb.nextInt();
-				kb.nextLine(); // scanner needs this because nextInt stays on same line.
-				trucks[truck] = new FoodTruck(name, type, rating);
-				if (truck == 4) {
-					displayFoodTruckOptions(trucks);
-				}
-
+		for (int truck = 0; truck < trucks.length; truck++) {
+			System.out.println("Please enter the name of a food truck: ");
+			System.out.println("Or to quit where you're at and view the trucks type Quit:");
+			System.out.println();
+			String name = kb.nextLine();
+			if (name.equals("Quit") || name.equals("quit")) {
+				displayFoodTruckOptions(trucks);
+				break;
 			}
+			System.out.println();
+			System.out.println("Please enter the food type of the food truck: ");
+			System.out.println();
+			String type = kb.nextLine();
+			System.out.println();
+			System.out.println("Please enter the rating of the food truck: ");
+			System.out.println();
+			int rating = kb.nextInt();
+			kb.nextLine(); // scanner needs this because nextInt stays on same line.
+			trucks[truck] = new FoodTruck(name, type, rating);
+			if (truck == 4) {
+				displayFoodTruckOptions(trucks);
+			}
+
+		}
 
 	}
 
@@ -124,7 +123,8 @@ public class FoodTruckApp {
 				}
 			}
 		}
-		System.out.println("The Food Truck with the highest rating is: " + trucks[a].getName() + " with a rating of " + rated);
+		System.out.println(
+				"The Food Truck with the highest rating is: " + trucks[a].getName() + " with a rating of " + rated);
 		System.out.println();
 		System.out.println(trucks[a].toString());
 		System.out.println();
