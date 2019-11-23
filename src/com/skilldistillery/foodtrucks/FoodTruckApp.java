@@ -34,6 +34,11 @@ public class FoodTruckApp {
 			System.out.println();
 			System.out.println("Please enter the rating of the food truck: ");
 			System.out.println();
+			while (!kb.hasNextInt()) {
+			      System.out.println("Input is not a number.");
+			      System.out.println("Please enter the rating of the food truck: ");
+			      kb.nextLine();
+			    }
 			int rating = kb.nextInt();
 			kb.nextLine(); // scanner needs this because nextInt stays on same line.
 			trucks[truck] = new FoodTruck(name, type, rating);
