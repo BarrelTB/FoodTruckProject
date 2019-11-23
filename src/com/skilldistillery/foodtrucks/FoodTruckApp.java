@@ -52,7 +52,7 @@ public class FoodTruckApp {
 			System.out.println("Option 1: List all existing food trucks.");
 			System.out.println("Option 2: See the average rating of food trucks.");
 			System.out.println("Option 3: Display the highest-rated food truck.");
-			System.out.println("Option 4: Quit the program.");
+			System.out.println("Option 4: Quit the program. (Any number entered above 4 will also quit the program)");
 			System.out.println();
 			int option = kb.nextInt();
 			switch (option) {
@@ -66,8 +66,6 @@ public class FoodTruckApp {
 					displayHighestRated(trucks);
 					break;
 				case 4:
-					exitGame();
-					break;
 				default:
 					exitGame();
 					break;
