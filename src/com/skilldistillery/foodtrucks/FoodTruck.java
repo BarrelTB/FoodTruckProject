@@ -10,12 +10,12 @@ public class FoodTruck {
 	private int rating;
 
 	// C O N S T R U C T O R S
-	public FoodTruck(String name, String foodType, int rating, int iD) {
+	public FoodTruck(String name, String foodType, int rating) {
 		super();
 		this.name = name;
 		this.foodType = foodType;
 		this.rating = rating;
-		this.iD = iD;
+		this.iD = ++uniqueId;
 	}
 
 	// M E T H O D S
@@ -49,6 +49,11 @@ public class FoodTruck {
 
 	public void setRating(int rating) {
 		this.rating = rating;
+	}
+
+	@Override
+	public String toString() {
+		return "Food Truck ID: " + iD + "\nFood Truck Name: " + name + "\nFood Truck Type: " + foodType + "\nFood Truck Rating: " + rating;
 	}
 
 }

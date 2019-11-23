@@ -18,16 +18,13 @@ public class FoodTruckApp {
 
 	public void run(FoodTruck[] trucks) {
 
-		boolean running = true;
 
-		while (running) {
-			for (int truck = 0, iD = 1; truck < trucks.length; truck++, iD++) {
+			for (int truck = 0; truck < trucks.length; truck++) {
 				System.out.println("Please enter the name of a food truck: ");
 				System.out.println("Or to quit where you're at and view the trucks type Quit:");
 				System.out.println();
 				String name = kb.nextLine();
-				if (name.equals("Quit")) {
-					running = false;
+				if (name.equals("Quit") || name.equals("quit")) {
 					displayFoodTruckOptions(trucks);
 					break;
 				}
@@ -40,10 +37,12 @@ public class FoodTruckApp {
 				System.out.println();
 				int rating = kb.nextInt();
 				kb.nextLine(); // scanner needs this because nextInt stays on same line.
-				trucks[truck] = new FoodTruck(name, type, rating, iD);
+				trucks[truck] = new FoodTruck(name, type, rating);
+				if (truck == 4) {
+					displayFoodTruckOptions(trucks);
+				}
 
 			}
-		}
 
 	}
 
@@ -51,25 +50,29 @@ public class FoodTruckApp {
 		if (trucks[0] == null) {
 			exitGame();
 		} else {
-			for (int i = 0; i < trucks.length; i++) {
-				System.out.println("Option 1: List all existing food trucks.");
-				System.out.println("Option 2: See the average rating of food trucks.");
-				System.out.println("Option 3: Display the highest-rated food truck.");
-				System.out.println("Option 4: Quit the program.");
-				System.out.println();
-				int option = kb.nextInt();
-				switch (option) {
-					case 1:
-						displayFoodTrucks(trucks);
-					case 2:
-						displayAverageRating(trucks);
-					case 3:
-						displayHighestRated(trucks);
-					case 4:
-						exitGame();
+			System.out.println("Option 1: List all existing food trucks.");
+			System.out.println("Option 2: See the average rating of food trucks.");
+			System.out.println("Option 3: Display the highest-rated food truck.");
+			System.out.println("Option 4: Quit the program.");
+			System.out.println();
+			int option = kb.nextInt();
+			switch (option) {
+				case 1:
+					displayFoodTrucks(trucks);
+					break;
+				case 2:
+					displayAverageRating(trucks);
+					break;
+				case 3:
+					displayHighestRated(trucks);
+					break;
+				case 4:
+					exitGame();
+					break;
+				default:
+					exitGame();
+					break;
 
-				}
-				kb.nextLine();
 			}
 		}
 
@@ -82,24 +85,27 @@ public class FoodTruckApp {
 	public void displayFoodTrucks(FoodTruck[] trucks) {
 		for (int i = 0; i < trucks.length; i++) {
 			if (trucks[i] != null) {
-				System.out.println("Food Truck: " + trucks[i].getiD());
-				System.out.println("Food Truck Name: " + trucks[i].getName());
-				System.out.println("Food Truck Type: " + trucks[i].getFoodType());
-				System.out.println("Food Truck Rating: " + trucks[i].getRating());
+				System.out.println();
+				System.out.println(trucks[i].toString());
 				System.out.println();
 			} else {
-				displayFoodTruckOptions(trucks);
 				break;
 
 			}
 		}
+		displayFoodTruckOptions(trucks);
 	}
 
 	public void displayAverageRating(FoodTruck[] trucks) {
-		int average = 0;
+		double average = 0;
+		double total = 0;
+		double a = 0;
 		for (int i = 0; i < trucks.length; i++) {
-			if (trucks[i] != null)
-				average += trucks[i].getRating();
+			if (trucks[i] != null) {
+				total += trucks[i].getRating();
+				a = i + 1;
+			}
+			average = total / a;
 		}
 		System.out.println("Food Trucks Average Rating: " + average);
 		System.out.println();
@@ -119,6 +125,8 @@ public class FoodTruckApp {
 			}
 		}
 		System.out.println("The Food Truck with the highest rating is: " + trucks[a].getName() + " with a rating of " + rated);
+		System.out.println();
+		System.out.println(trucks[a].toString());
 		System.out.println();
 		displayFoodTruckOptions(trucks);
 	}
