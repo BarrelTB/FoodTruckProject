@@ -3,7 +3,7 @@
 This program tracks input food trucks via their name, food type, and rating. As well the program auto generates a unique ID for each food truck object input into the system.
 
 ### Week 3 Homework for Skill Distillery
-This program is a homework assignment for week 3 of the Skill Distillery coding bootcamp course.
+This program is a homework assignment for week 3 of the Skill Distillery Java coding bootcamp course.
 
 ### How to use
 
@@ -46,7 +46,24 @@ This program is a homework assignment for week 3 of the Skill Distillery coding 
   <img width="515" alt="Screen Shot 2019-11-23 at 9 36 18 AM" src="https://user-images.githubusercontent.com/56698364/69482131-b50d5880-0dd4-11ea-89db-65dcb7c3c578.png">
 
 ### Topics
+ - Objects : Creating a FoodTruckApp object to access non static methods
+ - Switches : Using switches to determine userInput
+ - Non-Static fields : Passing in userInput data when creating Food Truck objects
+ - Non-Static methods : Accessing and utilizing non-static methods
+ - Object Arrays : Creating/implementing Food Truck object array
 
 ### Technologies
+- Java : Java version 1.8
+- Eclipse IDE
+- Atom text editor
+- GitHub
+- Git commands
+- shell
 
 ### Lessons Learned
+
+- Lesson 1 : When userInput is expecting an INT, the scanner needs to be manually set to the next line or it will skip areas of code on the next loop.
+
+- Lesson 2 : With object arrays, figuring out the programming logic to not include null value objects when printing available Food Trucks, calculating average, and finding the highest rated Food Truck.
+
+- Lesson 3: Working with README and GitHub to properly show screenshots to allow a reader better understand of the program.
